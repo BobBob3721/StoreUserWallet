@@ -1,0 +1,36 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+
+  #springBoot整合mvc 配置页面路径  前缀/后缀
+  mvc:         #引入mvn配置
+    view:
+      prefix: /WEB-INF/     # /默认代表根目录 src/main/webapp
+      suffix: .jsp
+
+
+#mybatis-plus配置
+mybatis-plus:
+  #定义别名包   只要定义了别名包,则程序中resultType可以省略包路径
+  type-aliases-package: com.bob.storedemo.pojo
+  #配置文件的资源加载路径
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+#开启mybatis的执行sql
+logging:
+  level:
+    #指定包路径                      #指定日志级别
+    com.jt.demo.mapper: debug

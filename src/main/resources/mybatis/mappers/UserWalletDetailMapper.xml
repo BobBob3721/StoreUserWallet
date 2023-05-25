@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace:主要作用唯一标识,与Mapper的接口进行绑定. -->
+<mapper namespace="com.bob.storedemo.mapper.UserWalletDetailMapper">
+
+
+
+
+</mapper>
